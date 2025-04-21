@@ -19,6 +19,7 @@ class Main extends PluginBase {
     public function onDisable(): void {
 
         $this->getLogger()->info("ZyroFFA desaactivé");
+        
  }
 
 
