@@ -32,32 +32,29 @@ class Ping extends Command {
                     if($ping < 100){
                         $ping = "§9{$ping}";
                     }
-                    if($ping >= 100 and $ping < 300){
-                        $ping = "§8{$ping}";
-                    }
-                    if($ping >= 300){
+                    if($ping >= 100 and $ping < 500){
                         $ping = "§7{$ping}";
                     }
+                    if($ping >= 500){
+                        $ping = "§c{$ping}";
+                    }
 
-                    $sender->sendMessage(" §a{$name} possède {$ping}ms");
+                    $sender->sendMessage("§aLe joueur {$name} possède {$ping}ms");
 
                 } else {
-
-                    $sender->sendMessage("§cErreur, faite /ping (nom du joueur)");
-
                 }
 
             } else {
 
                 $ping = $sender->getNetworkSession()->getPing();
                 if($ping < 100){
-                    $ping = "§2{$ping}";
+                    $ping = "§9{$ping}";
                 }
-                if($ping >= 100 and $ping < 300){
-                    $ping = "§6{$ping}";
+                if($ping >= 100 and $ping < 500){
+                    $ping = "§7{$ping}";
                 }
-                if($ping >= 300){
-                    $ping = "§4{$ping}";
+                if($ping >= 500){
+                    $ping = "§c{$ping}";
                 }
 
                 $sender->sendMessage("§aVous avez {$ping}ms");
