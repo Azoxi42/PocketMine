@@ -14,8 +14,14 @@ class PlayerListener implements Listener {
 
         if (!$player->hasPlayedBefore()) {
             $ev->setJoinMessage("§aBienvenue sur Cornalium $name");
+            
         } else {
             $ev->setJoinMessage("§a[+] $name");
         }
+    }
+    public function OnLeave(PlayerQuitEvent $ev): void {
+        $player = $ev->getPlayer();
+        $name = $player->getName();
+        $ev->setQuitMessage("§c[-] $name");
     }
 }
