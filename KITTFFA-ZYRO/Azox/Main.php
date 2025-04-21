@@ -12,7 +12,7 @@ class Main extends PluginBase {
     $this->getLogger()->info("ZyroFFA activé");
     $this->saveDefaultConfig();
     $this->getScheduler()->scheduleRepeatingTask(new TimeTask(), 20 * 60);
-
+    
 
 
   }
