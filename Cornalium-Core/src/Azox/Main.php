@@ -14,7 +14,7 @@ class Main extends PluginBase {
     $this->saveDefaultConfig();
     $this->getScheduler()->scheduleRepeatingTask(new TimeTask(), 20 * 60);
     $this->getServer()->getPluginManager()->registerEvents(new PlayerListener(), $this);
-    
+
   }
     public function onDisable(): void {
 
