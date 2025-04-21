@@ -11,7 +11,6 @@ class PlayerListener implements Listener {
     public function OnJoin(PlayerJoinEvent $ev): void {
         $player = $ev->getPlayer();
         $name = $player->getName();
-
         if (!$player->hasPlayedBefore()) {
             $ev->setJoinMessage("§aBienvenue sur Cornalium $name");
             
