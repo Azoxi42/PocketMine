@@ -61,9 +61,6 @@ class Ping extends Command {
 
             }
         } else {
-
-            
-
         }
     }
 }
