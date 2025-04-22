@@ -4,6 +4,7 @@ namespace Azox;
 
 use pocketmine\plugin\PluginBase;
 use Azox\Task\TimeTask;
+use Azox\Task\SpawnerTask;
 use Azox\Events\PlayerListener;
 
 class Main extends PluginBase {
@@ -14,7 +15,7 @@ class Main extends PluginBase {
     $this->saveDefaultConfig();
     $this->getScheduler()->scheduleRepeatingTask(new TimeTask(), 20 * 60);
     $this->getServer()->getPluginManager()->registerEvents(new PlayerListener(), $this);
-
+    $this->getScheduler()->scheduleRepeatingTask(new SpawnerTask(), 20 * 60);
   }
     public function onDisable(): void {
 
